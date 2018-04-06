@@ -9,7 +9,7 @@ public class GreetingServiceImpl extends GreetingServiceGrpc.GreetingServiceImpl
     @Override
     public void greeting(HelloRequest request, StreamObserver<HelloResponse> responseObserver) {
         String name = request.getName();
-        HelloResponse response = HelloResponse.newBuilder().setGreeting("A la verch perro " + name+ " me vale versh perro").build();
+        HelloResponse response = HelloResponse.newBuilder().setGreeting("Un saludo mas descente para " + name+ ", seas bien recibido honorable partner").build();
 
         responseObserver.onNext(response);
         responseObserver.onCompleted();
